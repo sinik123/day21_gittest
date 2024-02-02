@@ -18,6 +18,15 @@
             background-color: blue;
         }
     </style>
+    <script>
+        $(document).ready(function() {
+            var modWidth = 50;
+            $("div").click(function() {
+                $(this).width(modWidth).addClass("next");
+                modWidth -= 8;
+            });
+        });
+    </script>
     <div>1</div>
     <div>2</div>
     <div>3</div>
