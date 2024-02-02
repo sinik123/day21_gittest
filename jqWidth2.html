@@ -14,16 +14,29 @@
             margin: 5px;
             background-color: coral;
         }
-        .next{
-            background-color: blue;
-        }
     </style>
     <script>
+        var direction = false;
+        var modWidth = 70;
+        var count = 5;
+
         $(document).ready(function() {
-            var modWidth = 50;
+            
             $("div").click(function() {
-                $(this).width(modWidth).addClass("next");
-                modWidth -= 8;
+                if (!direction) {
+                    modWidth -= 8;
+                    $(this).css("background-color", "blue");
+                } else {
+                    modWidth += 8;
+                    $(this).css("background-color", "coral");
+                }
+
+                $(this).width(modWidth);
+                
+                if (--count == 0){
+                    direction = !direction;
+                    count = 5;
+                }
             });
         });
     </script>
