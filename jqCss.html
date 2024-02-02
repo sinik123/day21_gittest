@@ -6,7 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <style>
+        div{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                var color =  $("#div1").css("background-color");
+                $("#result").text("bgcolor:" + color);
+            });
+            $("#button2").click(function() {
+                $("#div1").css("background-color", "red");
+            });
+        });
+    </script>
     <div id="div1" style="background-color: green;"></div>
     <button id="button1">css(ele)</button>
     <button id="button2">css(ele, style)</button>
