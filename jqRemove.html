@@ -7,6 +7,26 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                $(".container").remove();
+            });
+            $("#button2").click(function() {
+                $(".container").empty();
+            });
+        });
+    </script>
+    <style>
+        p{
+            background-color: yellow;
+        }
+        .container{
+            height: 80px;
+            width: 200px;
+            border: 1px solid red;
+        }
+    </style>
     <button id="button1">remove</button>
     <button id="button2">empty</button>
     <div class="container">
